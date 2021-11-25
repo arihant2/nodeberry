@@ -34,12 +34,13 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:5000/signup",
-							"protocol": "http",
+							"raw": "https://nodeberry.herokuapp.com/signup",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"nodeberry",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"signup"
 							]
@@ -67,15 +68,16 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:5000/verifyemail/625567",
-							"protocol": "http",
+							"raw": "https://nodeberry.herokuapp.com/verifyemail/100601",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"nodeberry",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"verifyemail",
-								"625567"
+								"100601"
 							]
 						}
 					},
@@ -84,6 +86,16 @@
 				{
 					"name": "login",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2MTlmOTIxNTY0N2YyNmVjZWVkNTc2N2YiLCJ1c2VybmFtZSI6ImFiYyIsImdyb3VwIjoidXNlciIsImlhdCI6MTYzNzg0NzY1OCwiZXhwIjoxNjM3ODkwODU4fQ.KoDbMQrSANtDTLtaHuWTZys_VMwb_5GXznGeR0tjHaM",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -103,12 +115,13 @@
 							"raw": "{\r\n    \"email\":\"jekakoh673@luxiu2.com\",\r\n    \"password\":\"12345678\"\r\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/login",
-							"protocol": "http",
+							"raw": "https://nodeberry.herokuapp.com/login",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"nodeberry",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"login"
 							]
@@ -124,15 +137,26 @@
 				{
 					"name": "btc price",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2MTlmZjVkOTM1M2RmMzU1NDlkNjIxYjgiLCJ1c2VybmFtZSI6ImFiYyIsImdyb3VwIjoidXNlciIsImlhdCI6MTYzNzg3MzE1NSwiZXhwIjoxNjM3OTE2MzU1fQ.eBve6e-b0fvdLTdnNgp7CgF2lBsMxNdaAmxf_rylDSg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/bnb",
-							"protocol": "http",
+							"raw": "https://nodeberry.herokuapp.com/bnb",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"nodeberry",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"bnb"
 							]
@@ -148,7 +172,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2MTlmOTIxNTY0N2YyNmVjZWVkNTc2N2YiLCJ1c2VybmFtZSI6ImFiYyIsImdyb3VwIjoidXNlciIsImlhdCI6MTYzNzg0NzY1OCwiZXhwIjoxNjM3ODkwODU4fQ.KoDbMQrSANtDTLtaHuWTZys_VMwb_5GXznGeR0tjHaM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2MTlmZjVkOTM1M2RmMzU1NDlkNjIxYjgiLCJ1c2VybmFtZSI6ImFiYyIsImdyb3VwIjoidXNlciIsImlhdCI6MTYzNzg3MzE1NSwiZXhwIjoxNjM3OTE2MzU1fQ.eBve6e-b0fvdLTdnNgp7CgF2lBsMxNdaAmxf_rylDSg",
 									"type": "string"
 								}
 							]
@@ -156,12 +180,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/eth",
-							"protocol": "http",
+							"raw": "https://nodeberry.herokuapp.com/eth",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"nodeberry",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"eth"
 							]
@@ -177,7 +202,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2MTlmOTIxNTY0N2YyNmVjZWVkNTc2N2YiLCJ1c2VybmFtZSI6ImFiYyIsImdyb3VwIjoidXNlciIsImlhdCI6MTYzNzg0NzY1OCwiZXhwIjoxNjM3ODkwODU4fQ.KoDbMQrSANtDTLtaHuWTZys_VMwb_5GXznGeR0tjHaM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2MTlmZjVkOTM1M2RmMzU1NDlkNjIxYjgiLCJ1c2VybmFtZSI6ImFiYyIsImdyb3VwIjoidXNlciIsImlhdCI6MTYzNzg3MzE1NSwiZXhwIjoxNjM3OTE2MzU1fQ.eBve6e-b0fvdLTdnNgp7CgF2lBsMxNdaAmxf_rylDSg",
 									"type": "string"
 								}
 							]
@@ -185,12 +210,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/bnb",
-							"protocol": "http",
+							"raw": "https://nodeberry.herokuapp.com/bnb",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"nodeberry",
+								"herokuapp",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"bnb"
 							]

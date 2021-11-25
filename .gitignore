@@ -13,3 +13,4 @@ error_logs
 !backend/images/**
 !frontend/assets/**
 
+apis_postman_collection (for localhost).json
