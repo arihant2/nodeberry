@@ -26,8 +26,9 @@
   "bugs": {
     "url": "https://github.com/arihant2/nodeberry/issues"
   },
-  "homepage": "",
+  "homepage": "https://nodeberry.herokuapp.com",
   "dependencies": {
+    "@sendgrid/mail": "^7.5.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
@@ -37,7 +38,9 @@
     "mongoose": "^6.0.11",
     "mongoose-unique-validator": "^3.0.0",
     "nodemon": "^2.0.14",
+    "requests": "^0.3.0",
     "serve-favicon": "^2.5.0",
+    "swagger-ui-express": "^4.1.6",
     "winston": "^3.3.3",
     "winston-mongodb": "^5.0.7"
   }

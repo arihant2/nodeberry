@@ -1,0 +1,49 @@
+/* * { border: 1px solid; } */
+.pricings {
+    border: 1px solid;
+    border-radius: 15px;
+    /* padding: 5%; */
+    /* display: initial; */
+}
+.pricings .chknow {
+    /* border: 1px solid; */
+    border-radius: 15px;
+    /* padding: 6.5%; */
+    padding: 6%;
+    padding-top: 4.5%;
+    padding-bottom: 4.5%;
+    /* display: block; */
+    width: 90%;
+    margin: 0 auto;
+}
+.pricings .chknow .currency {
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* justify-content: center;        align inside content to center horizontally */
+    display: flex;
+    align-items: center;        /* align inside content to center vertically */
+}
+.pricings .chknow .currency .btn {
+    width: 80%;
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* border: 1px solid; */
+    /* align-items: center; */
+
+}
+/* .pricings .chknow .price { */
+    /* text-align: center; */
+    /* display: flex; */
+    /* align-items: center;        align inside content to center vertically */
+/* } */
+.pricings .chknow .price .result {
+    /* margin: 0 auto; */
+    /* float: right; */
+    /* font-size: 20px; */
+    font-weight: 500;
+    height: 50px;
+    /* width: fit-content; */
+    display: flex;
+    align-items: center;        /* align inside content to center vertically */
+    justify-content: center;      /* align inside content to center horizontally */
+}

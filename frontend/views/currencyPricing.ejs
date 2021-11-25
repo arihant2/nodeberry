@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 pricings">
+        <!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
+        <div class="row chknow">
+            <div class="col-6 currency">
+                <button type="button" class="btn btn-warning" onclick="btcPrice('<%= token %>')">BTC</button>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-4 price">
+                <label class="mt-1 result" id="btc">0</label>
+            </div>
+        </div>
+        <div class="row chknow">
+            <div class="col-6 currency">
+                <button type="button" class="btn btn-warning" onclick="ethPrice('<%= token %>')">ETH</button>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-4 price">
+                <label class="mt-1 result" id="eth">0</label>
+            </div>
+        </div>
+        <div class="row chknow">
+            <div class="col-6 currency">
+                <button type="button" class="btn btn-warning" onclick="bnbPrice('<%= token %>')">BNB</button>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-4 price">
+                <label class="mt-1 result" id="bnb">0</label>
+            </div>
+        </div>
+    </div>
+
+</div>
