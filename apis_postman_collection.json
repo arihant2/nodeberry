@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "19467258-04a2-476c-8758-c9f8789e0fa4",
+		"name": "Nodeberry - task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jekakoh673@luxiu2.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "otp",
+									"value": "625567",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/verifyemail/625567",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"verifyemail",
+								"625567"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jekakoh673@luxiu2.com\",\r\n    \"password\":\"12345678\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "currency pricing",
+			"item": [
+				{
+					"name": "btc price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/bnb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bnb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eth price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2MTlmOTIxNTY0N2YyNmVjZWVkNTc2N2YiLCJ1c2VybmFtZSI6ImFiYyIsImdyb3VwIjoidXNlciIsImlhdCI6MTYzNzg0NzY1OCwiZXhwIjoxNjM3ODkwODU4fQ.KoDbMQrSANtDTLtaHuWTZys_VMwb_5GXznGeR0tjHaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/eth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"eth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bnb price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2MTlmOTIxNTY0N2YyNmVjZWVkNTc2N2YiLCJ1c2VybmFtZSI6ImFiYyIsImdyb3VwIjoidXNlciIsImlhdCI6MTYzNzg0NzY1OCwiZXhwIjoxNjM3ODkwODU4fQ.KoDbMQrSANtDTLtaHuWTZys_VMwb_5GXznGeR0tjHaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/bnb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bnb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

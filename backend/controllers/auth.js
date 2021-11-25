@@ -27,11 +27,11 @@ const sendOtpController = tryCatchUtility(async (res,email) => {
     };
 
     // sending mail
-    // const response = await sendgridMail.send(format);
-    // if(!response) throw new generateErrUtility('Something went wrong!\nPlease try again later...',500);
+    const response = await sendgridMail.send(format);
+    if(!response) throw new generateErrUtility('Something went wrong!\nPlease try again later...',500);
     res.status(202).send('Email verification mail sent!\nPlease verify email to create account...');
 
-    console.log('1 systemOtp',systemOtp);
+    // console.log('1 systemOtp',systemOtp);
     // return systemOtp;
 });
 
@@ -63,7 +63,7 @@ export const signupController =  tryCatchUtility(async (req, res) => {
 
 // verify OTP to create account
 export const verifyOtpAndCreateAccountController =  tryCatchUtility(async (req, res) => {
-    console.log('4 systemOtp',systemOtp);
+    // console.log('4 systemOtp',systemOtp);
     if(systemOtp && newUser) {
         const { params:{ otp:userOtp } } = req;
 

@@ -18,8 +18,9 @@ async function common(api, token, id) {
 
         const { USD, EUR } = await response.json();
         // console.log('x',data);
-        const price = document.getElementById(id);
-        price.innerHTML = 'USD: &nbsp;'+USD + '<br>EUR: &nbsp;'+EUR;
+        // const price = document.getElementById(id);
+        // price.innerHTML = 'USD: &nbsp;'+USD + '<br>EUR: &nbsp;'+EUR;
+        document.getElementById(id).innerHTML = 'USD: &nbsp;'+USD + '<br>EUR: &nbsp;'+EUR;
     } catch (err) {
         console.log('err ->',err);
     }

@@ -74,6 +74,7 @@ signupForm.addEventListener('submit', async e => {
         // console.log(username,email,password);
 
         const response = await callApi('/signup','POST',{ username, email, password });
+        if(response.status === 422) return alert('Wrong input format for one of the fields!');
         if(response.status === 409) return alert('Email already exists!');
         if(response.status !== 202) {
             console.log(response.status);

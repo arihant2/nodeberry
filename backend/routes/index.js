@@ -10,13 +10,16 @@ import { printErrUtility } from '../utils/errHandling/printErr.js';
 const router = express.Router();
 
 router.get(/^\/(home)*$/, (_,res) => res.status(200).render('index',{ token: null }));
+// router.get('/', (_,res) => res.status(200).render('index',{ token: null }));
 // router.get('/currencypricing/:token', ({ params:{ token } },res) => {
 //     console.log('token',token);
 //     res.status(200).render('index',{ token });
 // });
 
-router.use('/',authRoute);
-router.use('/',currencyPricingRoute);
+// router.use('/',authRoute);
+router.use(/^(\/home)*/,authRoute);
+// router.use('/',currencyPricingRoute);
+router.use(/^(\/home)*/,currencyPricingRoute);
 
 
 // for invalid urls
