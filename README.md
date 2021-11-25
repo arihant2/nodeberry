@@ -7,3 +7,7 @@
 <br>
 
 > **API Documentation:** &nbsp;[https://nodeberry.herokuapp.com/api-docs](https://nodeberry.herokuapp.com/api-docs)
+
+<br>
+
+> Use [apis_postman_collection.json](apis_postman_collection.json) to import apis into postman
