@@ -16,7 +16,6 @@ export const validateDataUtility = tryCatchUtility(async(req, res, next) => {
     if(signup.test(url))
         await body('username','').trim().isLength({ max: 20 }).isAlphanumeric().run(req);
 
-
     const errors = validationResult(req);
     if(!errors.isEmpty()) return res.status(422).json({ errors: errors.array() });
 

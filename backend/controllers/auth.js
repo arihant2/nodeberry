@@ -9,7 +9,6 @@ import { generateErrUtility } from '../utils/errHandling/generateErr.js';
 
 // sending otp to verify email
 let systemOtp;
-// var systemOtp;
 const sendOtpController = tryCatchUtility(async (res,email) => {
     const { SENDGRID_MAIL_APIKEY:sgm_key, sender_mail } = process.env;
 
@@ -30,15 +29,10 @@ const sendOtpController = tryCatchUtility(async (res,email) => {
     const response = await sendgridMail.send(format);
     if(!response) throw new generateErrUtility('Something went wrong!\nPlease try again later...',500);
     res.status(202).send('Email verification mail sent!\nPlease verify email to create account...');
-
-    // console.log('1 systemOtp',systemOtp);
-    // return systemOtp;
 });
 
 // signup
-// let systemOtp, newUser;
 let newUser;
-// var systemOtp;
 export const signupController =  tryCatchUtility(async (req, res) => {
     // checking if email already exists
     const existingEmail = await userModel.findOne({ email: req.body.email }, { _id: 1 }).lean();
@@ -52,21 +46,12 @@ export const signupController =  tryCatchUtility(async (req, res) => {
     if(!newUser.password) throw new generateErrUtility('Something went wrong!\nPlease try again later...',500);
 
     // sending OTP to verify email
-    // systemOtp = sendOtpController(res,newUser.email);
     sendOtpController(res,newUser.email);
-    // systemOtp = await sendOtpController(res,newUser.email);
-    // console.log('2 systemOtp',systemOtp);
-    // if(!systemOtp) throw new generateErrUtility('Something went wrong!\nPlease try again later...',500);
 });
 
-// console.log('3 systemOtp',systemOtp);
-
 // verify OTP to create account
-export const verifyOtpAndCreateAccountController =  tryCatchUtility(async (req, res) => {
-    // console.log('4 systemOtp',systemOtp);
+export const verifyOtpAndCreateAccountController =  tryCatchUtility(async ({ params:{ otp:userOtp } }, res) => {
     if(systemOtp && newUser) {
-        const { params:{ otp:userOtp } } = req;
-
         if(userOtp !== systemOtp) throw new generateErrUtility('Incorrect OTP!',401);       // verify user code
 
         // saving new user into user model
@@ -82,10 +67,7 @@ export const verifyOtpAndCreateAccountController =  tryCatchUtility(async (req, 
 
 // login
 export let key;
-export const loginController = tryCatchUtility(async (req, res) => {
-    // console.log(req);
-    const { email, password } = req.body;
-
+export const loginController = tryCatchUtility(async ({ body:{ email, password } }, res) => {
     // check email
     const response = await userModel.findOne({ email }).lean();
     if(!response) throw new generateErrUtility('Invalid credentials!',401);
@@ -104,12 +86,9 @@ export const loginController = tryCatchUtility(async (req, res) => {
     if(!token) throw new generateErrUtility('Something went wrong!\nPlease try again later...',500);
 
     res.status(200).json({
-    // res.status(200).render('index', {
         msg: `${response.username} logged in successfully!`,
         user_group: response.ownership,
         token
     });
-    // res.status(200).redirect(`/currencypricing/${token}`);        // api calling
-    // res.status(200).redirect(`https://google.com`);        // api calling
 });
 

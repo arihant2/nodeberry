@@ -1,57 +1,18 @@
-/* * { border: 1px solid; } */
-
-/* div { border: 1px solid; } */
-
-/* .forms .signup { */
-    /* margin: 0 auto; */
-    /* border-left: 0.5 solid; */
-    /* border-radius: 5px; */
-/* } */
-/* .forms .login { */
-    /* margin: 0 auto; */
-    /* border-right: 0.5px solid; */
-    /* border-radius: 5px; */
-/* } */
 .forms .signup, .forms .verifyemail, .forms .login {
     padding: 5%;
     border: 1px solid;
     border-radius: 15px;
 }
 .forms .signup .heading2, .forms .verifyemail .heading2, .forms .login .heading2 {
-    /* font-weight: 450; */
-    /* font-size: 17px; */
     font-style: italic;
-    /* float: right; */
-    /* width: 100%;
-    text-align: right; */
 }
 .forms .signup h4, .forms .login h4 {
     text-transform: capitalize;
 }
 .forms .signup button, .forms .verifyemail button, .forms .login button {
     float: right;
-    /* margin: 0 auto; */
 }
-
-/* .forms .login, .forms .signup {
-    & heading2 {
-    font-style: italic;
-
-    }
-} */
-
 .forms .verifyemail {
     display: none;
 }
-/* .forms .verifyemail {
-    padding: 5%;
-    border: 1px solid;
-    border-radius: 15px;
-} */
 
-/* .forms .verifyemail .heading2 {
-    font-style: italic;
-} */
-/* .forms .verifyemail button {
-    float: right;
-} */
